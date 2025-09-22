@@ -1,15 +1,22 @@
-@import "tailwindcss";
+:root {
+    --color1: #0f0e17;
+    --color2: #1a1a2e;
+    --color3: #ffffff;
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    background-color: var(--color5)
+
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+a {
+    text-decoration: none;
+}
+
