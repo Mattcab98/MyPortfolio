@@ -1,0 +1,43 @@
+.container__button {
+    width: 80dvw;
+    height: 90dvh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgb(2, 110, 2);
+    color: var(--color3);
+    padding: 8px 5px;
+    border-radius: 8px;
+    font-size: .7rem;
+    color:  rgb(2, 110, 2);
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+}
+
+.danger {
+    border: 1px solid red;
+    color: red;
+    width: 7rem;
+}
+
+@media (min-width: 900px) {
+
+    .container__button {
+    width: auto;
+    height: auto;
+    position: relative;
+    }
+
+    .btn {
+        position: relative;
+        /* scale: 1.35; */
+    }
+    
+}
