@@ -2,6 +2,7 @@
     width: 100dvw;
     height: 100px;
     background-color: var(--color1);
+    z-index: 9999;
 }
 
 .header {

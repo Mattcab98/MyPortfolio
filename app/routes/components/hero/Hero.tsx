@@ -1,13 +1,23 @@
 import styles from './Hero.module.css';
 
+import Button from '../utils/button/Button';
+
 export default function Hero() {
     return (
         <div className={styles.hero}>
-            <h1>
-                DESARROLLO <br />
-                WEB
+            <h1 className={styles.title}>
+                DESARROLLO <br/> WEB
             </h1>
-            <h2>Servicios de desarrollo web para hacer que tu negocio destaque, impulsando el éxito de tu empresa de manera sencilla y con resultados garantizados.</h2>
+            <span className={styles.subtitle}></span>
+            <h2>
+                Servicios de desarrollo web enfocados en la creación de sitios modernos, funcionales y adaptados a las
+                necesidades de cada proyecto. Se prioriza el diseño atractivo, la optimización del rendimiento y la
+                implementación de buenas prácticas de programación, con el objetivo de impulsar la presencia digital
+                de negocios y emprendimientos, fortaleciendo su identidad en línea y generando resultados sostenibles
+                en el tiempo.
+            </h2>
+
+            <Button txtButton='Contáctame' />
         </div>
     );
 };
