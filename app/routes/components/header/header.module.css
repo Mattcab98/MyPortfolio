@@ -2,7 +2,8 @@
     width: 100dvw;
     height: 100px;
     background-color: var(--color1);
-    z-index: 9999;
+    z-index: 200;
+    position: relative;
 }
 
 .header {
@@ -17,13 +18,14 @@
     width: 160px;
     height: auto;
     position: relative;
-    z-index: 1;
+    z-index: 210;
 }
 
 .container__logo img {
     width: auto;
     height: auto;
     object-fit: cover;
+
 }
 
 .iconNav {
@@ -31,7 +33,8 @@
     font-size: 2.5rem;
     cursor: pointer;
     position: relative;
-    z-index: 1;
+    z-index: 100;
+
 }
 
 .nav {
@@ -52,6 +55,7 @@
     width: 100dvw;
     height: 100dvh;
     opacity: 1;
+    z-index: 100;
 }
 
 /* Contenedor de links */
