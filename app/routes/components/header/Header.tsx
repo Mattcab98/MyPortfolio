@@ -5,6 +5,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { gsap } from "gsap";
 import styles from "./header.module.css";
+import ParticlesBg from "../particlesBg/ParticlesBg";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +67,7 @@ export default function Header() {
 
     return (
         <div className={styles.container__header}>
+
 
             {(isDesktop || isOpen) && <ButtonAvailable status="available" />}
 

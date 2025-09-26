@@ -1,9 +1,7 @@
 .container__button {
     background-color: transparent;
-    width: 100dvw;
-    height: 100dvh;
     position: absolute;
-    z-index: 1;
+    z-index: 220;
 }
 
 .btn {
@@ -17,7 +15,7 @@
     font-weight: 700;
     color:  rgb(2, 110, 2);
 
-    position: absolute;
+    position: fixed;
     bottom: 4rem;
     right: 2rem;
 }
