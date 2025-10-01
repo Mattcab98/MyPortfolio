@@ -1,0 +1,52 @@
+.container__button {
+    background-color: transparent;
+    position: absolute;
+    z-index: 220;
+}
+
+.btn {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgb(2, 110, 2);
+    color: var(--color3);
+    padding: 8px 5px;
+    border-radius: 8px;
+    font-size: .7rem;
+    font-weight: 700;
+    color:  rgb(2, 110, 2);
+
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    transition: all .5s ease-in-out;
+
+}
+
+.danger {
+    border: 1px solid red;
+    color: red;
+    width: 7rem;
+    transition: all .5s ease-in-out;
+}
+
+@media (min-width: 600px) {
+    
+}
+@media (min-width: 900px) {
+
+    .container__button {
+    width: auto;
+    height: auto;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+}
+
+.btn {
+    position: relative;
+    z-index: 2000;
+    top: 2rem;
+    left: 10rem;
+}
+    
+}
