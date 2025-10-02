@@ -1,7 +1,5 @@
 import styles from './skills.module.css';
-import { FaGitAlt, FaGithub } from "react-icons/fa";
 
-import { DiHtml5, DiCss3, DiJsBadge, DiReact, DiGit } from "react-icons/di";
 
 import CardSkills from '../utils/cardSkills/CardSkills';
 

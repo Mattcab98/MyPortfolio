@@ -1,9 +1,11 @@
 .section__skills {
-  background-color: var(--color3);
+  background-color: var(--color1);
+  background-color: #000000ce;
   width: 100dvw;
   height: auto;
   padding: 2rem 0rem;
   display: flex;
+  border-radius: 2rem 2rem 0px 0px;
 }
 
 .container__skills {
@@ -19,7 +21,7 @@
   white-space: normal;
   overflow-wrap: break-word;
   text-align: center;
-  color: var(--color2);
+  color: var(--color3);
   text-shadow: none;
   font-weight: 900;
 }

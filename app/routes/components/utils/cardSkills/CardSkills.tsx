@@ -1,55 +1,97 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { DiHtml5, DiCss3, DiJsBadge, DiReact, DiGit } from "react-icons/di";
 import styles from "./cardSkills.module.css";
 
 const icons = [
-  { component: DiHtml5, className: styles.iconHtml, percent: 100 },
-  { component: DiCss3, className: styles.iconCss, percent: 100 },
-  { component: DiJsBadge, className: styles.iconJs, percent: 80 },
-  { component: DiReact, className: styles.iconReact, percent: 80 },
-  { component: DiGit, className: styles.iconGit, percent: 100 },
+  { component: DiHtml5, className: styles.iconHtml },
+  { component: DiCss3, className: styles.iconCss },
+  { component: DiJsBadge, className: styles.iconJs },
+  { component: DiReact, className: styles.iconReact },
+  { component: DiGit, className: styles.iconGit },
 ];
 
+type Bubble = {
+  x: number;
+  y: number;
+  dx: number;
+  dy: number;
+  ref: HTMLDivElement | null;
+};
+
 export default function CardSkills() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0); // 0 a 1
+  const containerRef = useRef<HTMLDivElement>(null);
+  const BUBBLE_SIZE = 70;
+
+  // Inicializamos el array con objetos vacíos para evitar undefined
+  const bubblesRef = useRef<Bubble[]>(
+    Array(icons.length)
+      .fill(0)
+      .map(() => ({ x: 0, y: 0, dx: 0, dy: 0, ref: null }))
+  );
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const section = sectionRef.current;
-      const rect = section.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+    const container = containerRef.current;
+    if (!container) return;
 
-      // porcentaje de scroll dentro de la sección
-      const totalScroll = rect.height + windowHeight;
-      const scrolled = windowHeight - rect.top;
-      const progress = Math.min(Math.max(scrolled / totalScroll, 0), 1);
-      setScrollProgress(progress);
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    // Inicializar posiciones y velocidades
+    bubblesRef.current.forEach((b) => {
+      b.x = Math.random() * (width - BUBBLE_SIZE);
+      b.y = Math.random() * (height - BUBBLE_SIZE);
+      b.dx = (Math.random() - 0.5) * 2.5; // velocidad horizontal
+      b.dy = (Math.random() - 0.5) * 2.5; // velocidad vertical
+    });
+
+    let animationFrame: number;
+
+    const animate = () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      bubblesRef.current.forEach((b) => {
+        if (!b.ref) return;
+
+        let newX = b.x + b.dx;
+        let newY = b.y + b.dy;
+
+        // rebote en los bordes
+        if (newX < 0) { newX = 0; b.dx = Math.abs(b.dx); }
+        if (newX > width - BUBBLE_SIZE) { newX = width - BUBBLE_SIZE; b.dx = -Math.abs(b.dx); }
+        if (newY < 0) { newY = 0; b.dy = Math.abs(b.dy); }
+        if (newY > height - BUBBLE_SIZE) { newY = height - BUBBLE_SIZE; b.dy = -Math.abs(b.dy); }
+
+        b.x = newX;
+        b.y = newY;
+
+        b.ref.style.left = `${newX}px`;
+        b.ref.style.top = `${newY}px`;
+      });
+
+      animationFrame = requestAnimationFrame(animate);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // actualizar al montar
-    return () => window.removeEventListener("scroll", handleScroll);
+    animate();
+
+    return () => cancelAnimationFrame(animationFrame);
   }, []);
 
-  return (
-    <div ref={sectionRef} className={styles.skillsSection}>
-      {icons.map(({ component: Icon, className, percent }, index) => {
-        const maxWidthVW = (80 * percent) / 100;
-        const leftVW = maxWidthVW * scrollProgress;
+return (
+  <div ref={containerRef} className={styles.skillsSection}>
+    {icons.map((icon, index) => {
+      const Icon = icon.component;
+      return (
+        <div
+          key={index}
+          className={styles.skill}
+          ref={(el) => { bubblesRef.current[index].ref = el; }} // <-- aquí corregido
+        >
+          <Icon className={`${styles.icon} ${icon.className}`} />
+        </div>
+      );
+    })}
+  </div>
+);
 
-        return (
-          <div key={index} className={styles.bgSkill}>
-            <div
-              className={styles.skill}
-              style={{ left: `${leftVW}vw` }}
-            >
-              <Icon className={`${styles.icon} ${className}`} />
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
 }

@@ -2,6 +2,7 @@
     width: 100dvw;
     height: 100px;
     background-color: var(--color1);
+    background-color: transparent;
     z-index: 210;
     position: relative;
 }
@@ -112,6 +113,8 @@
     
     .header {
         background-color: var(--color1);
+        background-color: transparent;
+
         display: flex;
         justify-content: space-between;
         align-items: center;

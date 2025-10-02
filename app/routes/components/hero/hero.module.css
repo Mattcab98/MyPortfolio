@@ -63,7 +63,7 @@ h2 {
 
     .container__hero {
         width: 90dvw;
-        height: 100dvh;
+        height: 100%;
         margin: auto;
     }
 
