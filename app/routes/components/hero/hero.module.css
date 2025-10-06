@@ -23,7 +23,7 @@
     position: relative;
 }
 
-h1 {
+.title {
     
     font-size: 3rem;
 
@@ -34,15 +34,21 @@ h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h2 {
+.subtitle {
     color: var(--color3);
     font-size: 1rem;
-    font-family: 'Courier New', Courier, monospace;
     text-shadow: 3px 3px 2px #272779;
 }
 
+.heroTxt {
+    color: var(--color3);
+    font-size: 1rem;
+    text-shadow: 3px 3px 2px #d3d3eb6c;
+    font-weight: 600;
+}
+
 @media (min-width: 720px) {
-    h1 {
+    .title {
         font-size: 4.3rem;
         background: linear-gradient(-10deg, #ffffff, #3b4149);
         -webkit-background-clip: text;
@@ -51,7 +57,7 @@ h2 {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
-    h2 {
+    .subtitle, .heroTxt {
         color: var(--color3);
         font-size: 1.3rem;
         font-family: 'Courier New', Courier, monospace;
@@ -67,7 +73,7 @@ h2 {
         margin: auto;
     }
 
-    h1 {
+    .title {
         font-size: 5rem;
     }
 }

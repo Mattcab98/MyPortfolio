@@ -1,0 +1,45 @@
+.container__aboutShort {
+    width: 100dvw;
+    display: flex; /* opcional: centrar todo el grid en el contenedor padre */
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.container__aboutShort div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center; 
+    align-items: center;   
+
+    width: 90dvw;
+    margin: auto;
+    background-color: var(--color3);
+    color: var(--color2);
+    text-align: center;
+    gap: 1.3rem;
+    padding: 5rem 2rem;
+    border-radius: 110px 130px 150px 0px;
+}
+
+.titleAbout {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.txtAbout span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+}
+
+.highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    color: var(--color2);
+}

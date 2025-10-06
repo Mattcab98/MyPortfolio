@@ -1,6 +1,5 @@
 import styles from './skills.module.css';
 
-
 import CardSkills from '../utils/cardSkills/CardSkills';
 
 export default function Skills() {

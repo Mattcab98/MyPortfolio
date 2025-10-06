@@ -6,16 +6,17 @@ export default function Hero() {
 
         <>
             <div className={styles.container__hero}>
-
-                <div className={styles.container__img}>
-                    {/* <img src="/perfil1.png" alt="Perfil" /> */}
-                </div>
-
                 <div className={styles.hero}>
-                    <h1 className={styles.title}>DESARROLLO WEB</h1>
-                    <h2>
-                        Servicios de desarrollo web enfocados en crear sitios modernos, funcionales y adaptados a las necesidades de cada proyecto. Priorizamos un diseño atractivo, rendimiento optimizado y buenas prácticas de programación, con el objetivo de fortalecer la presencia digital de negocios y generar resultados sostenibles en el tiempo.
+                    <h1 className={styles.title}>Desarrollo Web Profesional</h1>
+                    <h2 className={styles.subtitle}>
+                        Servicios a medida, para potenciar tu presencia digital
                     </h2>
+                    <p className={styles.heroTxt}>
+                        MAT ofrece desarrollo de sitios web modernos, funcionales y adaptados a cada proyecto.
+                        Se prioriza un diseño atractivo, rendimiento optimizado y buenas prácticas de programación,
+                        con el objetivo de generar resultados sostenibles para tu negocio.
+                    </p>
+
                     <Button txtButton="Contáctame" />
                 </div>
             </div>

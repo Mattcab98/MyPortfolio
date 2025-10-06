@@ -3,6 +3,8 @@
   --color2: #10144e;
   --color3: #ffffff;
   --font-primary: 'Courier New', Courier, monospace;
+
+  font-family: var(--font-primary);
 }
 
 html {
