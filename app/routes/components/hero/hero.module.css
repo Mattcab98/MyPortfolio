@@ -18,20 +18,27 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 3rem 2rem;
-    gap: 3rem;
+    padding: 1rem 1rem;
+    gap: 1rem;
     position: relative;
 }
 
 .title {
     
-    font-size: 3rem;
+    font-size: 2rem;
 
     background: linear-gradient(-10deg, #ffffff, #3b4149);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+
+}
+
+.title span {
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 .subtitle {
@@ -43,7 +50,7 @@
 .heroTxt {
     color: var(--color3);
     font-size: 1rem;
-    text-shadow: 3px 3px 2px #d3d3eb6c;
+    text-shadow: 3px 3px 2px #272779;
     font-weight: 600;
 }
 

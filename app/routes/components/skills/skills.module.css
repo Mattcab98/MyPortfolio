@@ -1,9 +1,9 @@
 .section__skills {
   background-color: var(--color1);
-  background-color: #000000ce;
+  background-color: #000000e3;
   width: 100dvw;
   height: auto;
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   display: flex;
   border-radius: 2rem 2rem 0px 0px;
 }
