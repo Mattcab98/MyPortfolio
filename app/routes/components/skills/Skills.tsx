@@ -13,7 +13,7 @@ export default function Skills() {
                 <div className={styles.tittle__skills}>
                     <h2 className={styles.h2}>
                         De la Idea al Código: <br />
-                        <span>Mis Habilidades</span>
+                        {/* <span>Mis Habilidades</span> */}
                     </h2>
                 </div>
 

@@ -10,8 +10,8 @@ export default function Home() {
       <StarFieldScene />
       
       <Hero />
-      <Skills />
       <AboutShort />
+      <Skills />
       <ProjectsShort/>
     </>
   );

@@ -1,23 +1,43 @@
 import styles from './hero.module.css';
 import Button from '../utils/button/Button';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
 
 export default function Hero() {
+    const words = ['Diseño.', 'Código.', 'Experiencia.'];
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
 
         <>
             <div className={styles.container__hero}>
                 <div className={styles.hero}>
-                    <h1 className={styles.title}>Desarrollo <span>WEB</span></h1>
-                    <h2 className={styles.subtitle}>
-                        Servicios a medida, para potenciar tu presencia digital
-                    </h2>
-                    <p className={styles.heroTxt}>
-                        mat. ofrece desarrollo de sitios web modernos, funcionales y adaptados a cada proyecto.
-                        Se prioriza un diseño atractivo, rendimiento optimizado y buenas prácticas de programación,
-                        con el objetivo de generar resultados sostenibles para tu negocio.
-                    </p>
 
-                    <Button txtButton="Contáctame" />
+                    <h1 className={styles.title}>Desarrollo web pensado para crecer junto a tu proyecto.</h1>
+
+                    <AnimatePresence mode='wait'>
+                        <motion.h2
+                            key={index}
+                            initial={{ x: 100, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            exit={{ x: -100, opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className={styles.subtitle}
+                        >
+                            {words[index]}
+                        </motion.h2>
+                    </AnimatePresence>
+
+                    <Button txtButton="Contáctanos" />
                 </div>
             </div>
         </>
