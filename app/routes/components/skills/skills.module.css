@@ -2,8 +2,8 @@
   background-color: var(--color1);
   background-color: #000000e3;
   width: 100dvw;
-  height: auto;
-  padding: 1rem 0rem;
+  height: 100dvh;
+  margin: auto;
   display: flex;
   border-radius: 2rem 2rem 0px 0px;
 }

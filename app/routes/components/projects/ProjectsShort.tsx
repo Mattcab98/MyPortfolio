@@ -10,7 +10,7 @@ const dataCardProyect = [
     {
         title: 'Proyecto 2',
         description: 'Descripción del proyecto 2',
-        img: '/ej1.jpg'
+        img: '/ej2.jpg'
     },
 ]
 

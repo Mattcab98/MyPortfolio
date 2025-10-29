@@ -1,16 +1,7 @@
-.container__aboutShort {
-    width: 100dvw;
-    display: flex; /* opcional: centrar todo el grid en el contenedor padre */
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    padding: 1rem 0;
-    text-align: center;
-}
+
 
 .container__aboutShort div {
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     justify-items: center; 
     align-items: center;   
