@@ -32,7 +32,7 @@ export default function Header() {
                     className={`${styles.nav} ${isOpen ? styles.navActive : ""}`}
                 >
                     <div className={styles.container__a}>
-                        {["Inicio", "Acerca de", "Habilidades", "Servicios", "Contáctame"].map((text, index) => (
+                        {["Inicio", "About", "Servicios", "Contáctame"].map((text, index) => (
                             <Link
                                 key={index}
                                 to={text === "Inicio" ? "/" : `/${text.toLowerCase()}`}

@@ -1,0 +1,16 @@
+.word {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 720px) {
+  .word {
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+@media (min-width: 900px) {
+  .word {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,42 @@
+
+.container__about {
+    background-color: var(--color2);
+    width: 100dvw;
+    height: 100%;
+}
+
+.container__about div {
+
+    background-color: var(--color3);
+    width: 90dvw;
+    width: 100%;
+    margin: auto;
+    color: var(--color2);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titleAbout {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.txtAbout {
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.txtAbout span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+}
+
+.wordsChange {
+    color: var(--color2);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
