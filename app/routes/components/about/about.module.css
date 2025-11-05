@@ -1,12 +1,11 @@
 
 .container__about {
-    background-color: var(--color2);
     width: 100dvw;
     height: 100%;
 }
 
-.container__about div {
-
+.aboutContent {
+    
     background-color: var(--color3);
     width: 90dvw;
     width: 100%;
@@ -16,6 +15,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    padding: 3rem 0;
 }
 
 .titleAbout {
@@ -39,4 +40,5 @@
     color: var(--color2);
     font-size: 1.3rem;
     font-weight: 600;
+    padding: 10px 0px;
 }

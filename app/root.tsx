@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import Header from "./routes/components/header/Header";
+import Footer from "./routes/components/footer/Footer";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -47,6 +48,7 @@ export default function App() {
   <>
     <Header/>
     <Outlet />
+    <Footer/>
   </> )
 }
 

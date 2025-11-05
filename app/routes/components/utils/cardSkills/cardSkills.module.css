@@ -6,6 +6,7 @@
   display: block;
 }
 
+/* --- Burbuja base --- */
 .skill {
   width: 70px;
   height: 70px;
@@ -17,47 +18,68 @@
   position: absolute;
   top: 0;
   left: 0;
-
-  transition: border 0.3s ease, transform 0.3s ease; /* transición suave */
-  transform: scale(1); /* escala inicial */
+  transform: scale(1);
+  transition: 
+    border 0.3s ease,
+    transform 0.4s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.skill.hovered {
-  border: 1px solid #2a27c9;
-  transform: scale(1.3); 
+/* --- Efecto al pasar el mouse --- */
+.skill:hover {
+  border: 1px solid var(--color3);
+  transform: scale(1.25);
+  box-shadow: 0 0 15px var(--color2);
 }
 
+/* --- Íconos dentro de las burbujas --- */
 .icon {
   color: var(--color3);
   font-size: 2.5rem;
   width: 40px;
   height: 40px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.skill:hover .icon {
+  color: #2a27c9;
+  transform: scale(1.1);
+}
+
+/* --- Responsividad --- */
 @media (min-width: 700px) {
   .skillsSection {
     height: 500px;
   }
 
   .skill {
-    transform: scale(1.3);
+    width: 80px;
+    height: 80px;
+    transform: scale(1.15);
   }
 
-  .skill.hovered {
-  border: 1px solid #2a27c9;
-  transform: scale(1.5); 
-}
-
+  .skill:hover {
+    transform: scale(1.35);
+  }
 }
 
 @media (min-width: 900px) {
-  .skill {
-    transform: scale(1.5);
+  .skillsSection {
+    height: 550px;
   }
 
-  .skill.hovered {
-  border: 1px solid #2a27c9;
-  transform: scale(1.6); 
-}
+  .skill {
+    width: 90px;
+    height: 90px;
+    transform: scale(1.25);
+  }
 
+  .skill:hover {
+    transform: scale(1.4);
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
 }

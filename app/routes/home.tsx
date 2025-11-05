@@ -3,7 +3,9 @@ import Skills from "./components/skills/Skills";
 import { StarFieldScene } from "./components/Galaxy";
 import AboutShort from "./components/about/AboutShort";
 import ProjectsShort from "./components/projects/ProjectsShort";
-// import About from "./components/about/About";
+// import Footer from "./components/footer/Footer";
+
+
 export default function Home() {
   return (
     <>
@@ -12,7 +14,7 @@ export default function Home() {
       <AboutShort />
       <Skills />
       <ProjectsShort/>
-      {/* <About/> */}
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import styles from './projectsShort.module.css'
 import CardProjects from '../utils/cardProjects/CardProjects'
 
@@ -27,22 +28,29 @@ const dataCardProyect = [
 export default function ProjectsShort() {
 
     return (
-        <>
-            <div className={styles.container}>
-                
-                <div className={styles.container__cards}>
-                    {dataCardProyect.map((project, index) => (
+        <div className={styles.container}>
+            <div className={styles.container__cards}>
+                {dataCardProyect.map((project, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 60,
+                            damping: 15,
+                            duration: 0.6,
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         <CardProjects
-                            key={index}
                             title={project.title}
                             description={project.description}
                             img={project.img}
                         />
-                    ))}
-                </div>
-
+                    </motion.div>
+                ))}
             </div>
-        </>
+        </div>
     )
-
 }
